@@ -12,19 +12,19 @@ app.get('/calculadora', async (req, res) => {
             return res.status(400).send('Erro: Parâmetros "numUm" e "numDois" devem ser números válidos.');
         }
 
-        if(operacao === 'soma'){
+        if (operacao === 'soma') {
             result = n1 + n2;
-        }else if(operacao === 'subtracao'){
+        } else if (operacao === 'subtracao') {
             result = n1 - n2;
-        }else if(operacao === 'multiplicacao'){
+        } else if (operacao === 'multiplicacao') {
             result = n1 * n2;
-        }else if(operacao === 'divisao'){
-            if(n2 === 0){
+        } else if (operacao === 'divisao') {
+            if (n2 === 0) {
                 return res.status(400).send('Erro: Divisão por zero não é permitida.');
             }
             result = n1 / n2;
         }
-        else{
+        else {
             return res.status(400).send('Erro: Operação inválida. Use "soma", "subtracao", "multiplicacao" ou "divisao".');
         }
         return res.status(200).send(`O resultado da ${operacao} é: ${result}`);
