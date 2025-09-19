@@ -1,5 +1,5 @@
 const app = require('express')();
-const PORT = 2800;
+const PORT = 3000;
 
 // exercício 4
 app.get('/ano/:ano', (req, res) => {
