@@ -1,7 +1,7 @@
 const app = require('express')();
 const PORT = 3000;
 
-// exercicio 3
+// exercicio 3git
 // Criando uma rota /operacao/:tipo onde tipo é a operação matemática (soma, subtracao, multiplicacao, divisao).
 
 app.get('/operacao/:tipo', (req, res) => {
